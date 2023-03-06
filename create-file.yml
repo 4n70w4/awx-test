@@ -1,8 +1,13 @@
 ---
 
 - hosts: all
+
+  vars:
+    filename: test
+    content: test
+
   tasks:
   - name: Creating an empty file
     file:
-      path: "/test"
+      path: "/{{filename}}"
       state: touch
